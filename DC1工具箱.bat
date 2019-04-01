@@ -1,6 +1,6 @@
 @shift /0
 @echo off
-title DC1¹Ì¼þÉú³É¡¢Ë¢Ð´¹¤¾ßÏä
+title DC1å›ºä»¶ç”Ÿæˆã€åˆ·å†™å·¥å…·ç®±
 
 set PYTHONPATH=%cd%\Prerequisites\Python27
 set PYTHON_SCRIPTS_PATH=%cd%\Prerequisites\Python27\Scripts
@@ -8,7 +8,7 @@ set GITPATH=%cd%\Prerequisites\git\cmd
 
 >"%tmp%\t.t" echo;WSH.Echo(/[\u4E00-\u9FFF]/.test(WSH.Arguments(0)))
 for /f %%a in ('cscript -nologo -e:jscript "%tmp%\t.t" "%PYTHONPATH%"') do if %%a neq 0 (
-Color cf&echo;µ±Ç°ÔËÐÐ»·¾³ %PYTHONPATH%&echo;!!!Çë²»ÒªÔÚÖÐÎÄÄ¿Â¼ÏÂÊ¹ÓÃ!!!&echo;&pause&EXIT /B) else (Goto Start)
+Color cf&echo;å½“å‰è¿è¡ŒçŽ¯å¢ƒ %PYTHONPATH%&echo;!!!è¯·ä¸è¦åœ¨ä¸­æ–‡ç›®å½•ä¸‹ä½¿ç”¨!!!&echo;&pause&EXIT /B) else (Goto Start)
 
 :Start
 set PATH=%PYTHONPATH%;%PYTHON_SCRIPTS_PATH%;%GITPATH%;%PATH%
@@ -19,28 +19,28 @@ Set var=0
 :Menu
 cls
 echo.
-echo ¡¸ DC1¹Ì¼þÉú³É¡¢Ë¢Ð´¹¤¾ßÏä ¡¹
+echo ã€Œ DC1å›ºä»¶ç”Ÿæˆã€åˆ·å†™å·¥å…·ç®± ã€
 echo.
-echo    ´Ë¹¤¾ßÓÃÓÚDC1¹Ì¼þµÄÉú³ÉÓëË¢Ð´£¬Çë½«¹Ì¼þÅäÖÃÎÄ¼þ´æ·ÅÓÚconfig_yaml
-echo    Ä¿Â¼ÄÚ¡£°´ÕÕ×Ô¼ºµÄÇé¿öÐÞ¸ÄÅäÖÃÎÄ¼þÖÐsubstitutionsÏÂÃæµÄ²ÎÊý¡£
-echo    È»ºóÖ´ÐÐ²Ëµ¥(1)£¬È·ÈÏÎÞ±¨´íºóÖ´ÐÐ²Ëµ¥(3)¡£
+echo    æ­¤å·¥å…·ç”¨äºŽDC1å›ºä»¶çš„ç”Ÿæˆä¸Žåˆ·å†™ï¼Œè¯·å°†å›ºä»¶é…ç½®æ–‡ä»¶å­˜æ”¾äºŽconfig_yaml
+echo    ç›®å½•å†…ã€‚æŒ‰ç…§è‡ªå·±çš„æƒ…å†µä¿®æ”¹é…ç½®æ–‡ä»¶ä¸­substitutionsä¸‹é¢çš„å‚æ•°ã€‚
+echo    ç„¶åŽæ‰§è¡Œèœå•(1)ï¼Œç¡®è®¤æ— æŠ¥é”™åŽæ‰§è¡Œèœå•(3)ã€‚
 echo.
-echo    ³õ´ÎÊ¹ÓÃ±ØÐëTTLÏßË¢£¬ºóÐø¿ÉÒÔÍ¨¹ýOTAÉý¼¶¡£
-echo    ²Ëµ¥(3)Éý¼¶DC1¹Ì¼þ Ö§³ÖTTLºÍOTAË«Ä£Ê½Ñ¡Ôñ¡£
-echo    TTLË¢¹Ì¼þµÄ½ÓÏß¼°½øÈëË¢Ð´Ä£Ê½·½·¨Çë²Î¿¼ÎÄµµËµÃ÷¡£
+echo    åˆæ¬¡ä½¿ç”¨å¿…é¡»TTLçº¿åˆ·ï¼ŒåŽç»­å¯ä»¥é€šè¿‡OTAå‡çº§ã€‚
+echo    èœå•(3)å‡çº§DC1å›ºä»¶ æ”¯æŒTTLå’ŒOTAåŒæ¨¡å¼é€‰æ‹©ã€‚
+echo    TTLåˆ·å›ºä»¶çš„æŽ¥çº¿åŠè¿›å…¥åˆ·å†™æ¨¡å¼æ–¹æ³•è¯·å‚è€ƒæ–‡æ¡£è¯´æ˜Žã€‚
 echo.
-echo  ²Ëµ¥:
+echo  èœå•:
 echo.
-echo        (1)  ±àÒë¹Ì¼þ          (2)  Éý¼¶±àÒë»·¾³
+echo        (1)  ç¼–è¯‘å›ºä»¶          (2)  å‡çº§ç¼–è¯‘çŽ¯å¢ƒ
 echo.
-echo        (3)  Éý¼¶DC1¹Ì¼þ       (4)  ²é¿´ÈÕÖ¾
+echo        (3)  å‡çº§DC1å›ºä»¶       (4)  æŸ¥çœ‹æ—¥å¿—
 echo.
-echo        (q)  ÍË³ö
+echo        (q)  é€€å‡º
 echo.
 echo.
-if %var% neq 0 echo ÊäÈëÎÞÐ§ÇëÖØÐÂÊäÈë£¡
+if %var% neq 0 echo è¾“å…¥æ— æ•ˆè¯·é‡æ–°è¾“å…¥ï¼
 Set choice=
-Set /p choice=ÇëÊäÈë£º 
+Set /p choice=è¯·è¾“å…¥ï¼š 
 Set "choice=%choice:"=%"
 if "%choice:~-1%"=="=" Goto Menu
 if "%choice%"=="" Goto Menu
@@ -58,11 +58,11 @@ Goto Check1
 
 :Check1
 cls
-if %var2% neq 0 echo ÊäÈëÎÞÐ§ÇëÖØÐÂÊäÈë£¡
-set /p input_source=ÇëÊäÈëÅäÖÃÎÄ¼þÃû×Ö£¬±ÈÈç£ºlivingroom£¬²»ÐèÒªÊäÈë.yamlºó×º£º 
-echo µ±Ç°Ñ¡ÔñµÄÅäÖÃÎÄ¼þÎª¡¸ %input_source%.yaml ¡¹
+if %var2% neq 0 echo è¾“å…¥æ— æ•ˆè¯·é‡æ–°è¾“å…¥ï¼
+set /p input_source=è¯·è¾“å…¥é…ç½®æ–‡ä»¶åå­—ï¼Œæ¯”å¦‚ï¼šlivingroomï¼Œä¸éœ€è¦è¾“å…¥.yamlåŽç¼€ï¼š 
+echo å½“å‰é€‰æ‹©çš„é…ç½®æ–‡ä»¶ä¸ºã€Œ %input_source%.yaml ã€
 Set choice1=
-Set /p choice1=È·ÈÏ£ºy  È¡Ïû£ºn ·µ»ØÉÏ¼¶²Ëµ¥£ºb  ÇëÑ¡Ôñ£º 
+Set /p choice1=ç¡®è®¤ï¼šy  å–æ¶ˆï¼šn è¿”å›žä¸Šçº§èœå•ï¼šb  è¯·é€‰æ‹©ï¼š 
 Set "choice1=%choice1:"=%"
 if "%choice1:~-1%"=="=" Goto Check1
 if "%choice1%"=="" Goto Check1
@@ -75,15 +75,15 @@ Goto Check1
 :Update
 ::python -m pip uninstall esphome
 cd Prerequisites
-if exist esphome (echo y|cacls esphome /p everyone:f >nul 2>nul &&rd /s /q esphome) else echo esphomeÎÄ¼þ¼Ð²»´æÔÚ,Ìø¹ý...
+if exist esphome (echo y|cacls esphome /p everyone:f >nul 2>nul &&rd /s /q esphome) else echo esphomeæ–‡ä»¶å¤¹ä¸å­˜åœ¨,è·³è¿‡...
 ::rd /s /q esphome
-git clone https://github.com/Samuel-0-0/esphome.git
+git clone https://github.com/kukudemajia/esphome-core.git
 cd esphome
 python setup.py build
 python setup.py install
 python -m pip list
 echo.
-echo ***¸üÐÂÍê³É¡£ÇëÖØÐÂ´ò¿ª¹¤¾ßÏä***
+echo ***æ›´æ–°å®Œæˆã€‚è¯·é‡æ–°æ‰“å¼€å·¥å…·ç®±***
 if exist esphome (echo y|cacls esphome /p everyone:f >nul 2>nul &&rd /s /q esphome)
 echo.&Pause&EXIT
 
@@ -107,7 +107,7 @@ Goto End
 if "%choice%" neq "" (
     cls
     if "%choice%" neq "3" (
-        echo ²Ù×÷Íê³É ! ÕýÔÚ·µ»ØÖ÷²Ëµ¥...
+        echo æ“ä½œå®Œæˆ ! æ­£åœ¨è¿”å›žä¸»èœå•...
         if exist %WINDIR%\System32\timeout.exe (timeout /t 2) else (if exist %WINDIR%\System32\choice.exe (choice /t 2 /d y /n >nul) else (ping 127.1 -n 2 >nul))
     )
     Goto Start
