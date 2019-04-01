@@ -1,0 +1,33 @@
+{
+  "name": "esphome-core",
+  "keywords": "esp32, home-assistant, ir, ledc, mqtt, iot",
+  "description": "ESPHome - Reimagining DIY Home Automation.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esphome/esphome-core.git"
+  },
+  "version": "1.13.0-dev",
+  "authors": [
+    {
+      "name": "Otto Winter",
+      "email": "contact@otto-winter.com",
+      "url": "https://otto-winter.com",
+      "maintainer": true
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "ArduinoJson-esphomelib",
+      "version": "5.13.3"
+    }
+  ],
+  "build": {
+    "flags": "-Wno-reorder"
+  },
+  "license": "GPL-3.0",
+  "frameworks": "arduino",
+  "platforms": [
+    "espressif32",
+    "espressif8266"
+  ]
+}

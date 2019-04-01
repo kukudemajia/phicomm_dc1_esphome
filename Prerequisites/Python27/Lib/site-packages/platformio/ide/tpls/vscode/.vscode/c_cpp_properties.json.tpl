@@ -1,0 +1,69 @@
+{
+    "!!! WARNING !!!": "PLEASE DO NOT MODIFY THIS FILE! USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags",
+    "configurations": [
+        {
+% import platform
+% from os.path import commonprefix, dirname
+%
+% systype = platform.system().lower()
+%
+% def _escape(text):
+%   return text.replace('\\\\', '/').replace('\\', '/').replace('"', '\\"')
+% end
+%
+% cleaned_includes = []
+% for include in includes:
+%   if "toolchain-" not in dirname(commonprefix([include, cc_path])):
+%     cleaned_includes.append(include)
+%   end
+% end
+%
+% if systype == "windows":
+            "name": "Win32",
+% elif systype == "darwin":
+            "name": "Mac",
+            "macFrameworkPath": [],
+% else:
+            "name": "Linux",
+% end
+            "includePath": [
+% for include in cleaned_includes:
+                "{{! _escape(include) }}",
+% end
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceRoot}/.vscode/.browse.c_cpp.db",
+                "path": [
+% for include in cleaned_includes:
+                    "{{! _escape(include) }}",
+% end
+                    ""
+                ]
+            },
+            "defines": [
+% for define in defines:
+                "{{! _escape(define) }}",
+% end
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+% import re
+% STD_RE = re.compile(r"\-std=[a-z\+]+(\d+)")
+% cc_stds = STD_RE.findall(cc_flags)
+% cxx_stds = STD_RE.findall(cxx_flags)
+%
+% # pass only architecture specific flags
+% cc_m_flags = " ".join([f.strip() for f in cc_flags.split(" ") if f.strip().startswith("-m")])
+%
+% if cc_stds:
+            "cStandard": "c{{ cc_stds[-1] }}",
+% end
+% if cxx_stds:
+            "cppStandard": "c++{{ cxx_stds[-1] }}",
+% end
+            "compilerPath": "{{! _escape(cc_path) }} {{! _escape(cc_m_flags) }}"
+        }
+    ]
+}
