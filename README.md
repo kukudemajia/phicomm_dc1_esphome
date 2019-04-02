@@ -23,7 +23,7 @@
 ## 工具下载地址
 
 右上角「 Clone or download 」  →  「 Download  ZIP 」
-### ==建议定期更新刷机工具==
+
 
 # 错误解决
 遇到未知错误，请删除config_yaml文件夹内.esphome和build下与配置文件对应的文件和文件夹！
