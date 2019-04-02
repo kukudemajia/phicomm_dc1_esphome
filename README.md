@@ -1,4 +1,5 @@
-修改于Samuel-0-0。
+修改于Samuel-0-0（https://github.com/Samuel-0-0/phicomm_dc1-esphome）。
+
 修正电流、功率显示问题，支持1000W以上大功率设备的正常使用，支持WEBSERVER、OTA升级
 
 ## 「 关于DC1固件生成、刷写工具箱 」
